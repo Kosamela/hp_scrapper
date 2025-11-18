@@ -145,10 +145,11 @@ def save_excel(data, file="hp_laptops.xlsx"):
 
 
 def main():
-    serials = ["8CG2131LL6", "5CD251CHS6"]  # Tutaj kurla wpisz ten sn w postaci listy z przecinkiem np jak kolejne ,"SN"
+    serials = ["SN", "SN"]  # Tutaj kurla wpisz ten sn w postaci listy z przecinkiem np jak kolejne ,"SN"
     results = scrap_with_selenium(serials)
     save_excel(results)
 
 
 if __name__ == "__main__":
     main()
+
