@@ -22,7 +22,7 @@ def scrap_with_selenium(serials):
     for serial in serials:
         print(f"\n➡ Pobieram dane dla: {serial}")
         driver.get(HP_SEARCH)
-
+        time.sleep(1)
 
         # --- Klikamy Accept Cookies ---
         try:
@@ -152,4 +152,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
