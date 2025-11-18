@@ -135,10 +135,11 @@ def save_excel(data, file="hp_laptops.xlsx"):
 
     wb = openpyxl.Workbook()
     ws = wb.active
-    ws.append(["Model", "Serial", "CPU", "RAM", "Dysk", "OS", "Gwarancja"])
+    ws.append(["Model", "Serial", "Specyfikacja", "OS", "Gwarancja"])
 
     for row in data:
-        ws.append([row["Model"], row["Serial"], row["CPU"], row["RAM"], row["Dysk"], row["OS"], row["Gwarancja"]])
+        specs = f"{row['CPU']}; {row['RAM']}; {row['Dysk']}"
+        ws.append([row["Model"], row["Serial"], specs, row["OS"], row["Gwarancja"]])
 
     wb.save(file)
     print(f"📁 Wynik zapisany do: {file}")
@@ -152,3 +153,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
