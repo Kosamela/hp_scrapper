@@ -61,7 +61,7 @@ def scrap_with_selenium(serials):
             full_spec_btn = driver.find_element(By.ID, "Viewfull")
             full_spec_btn.click()
             print("✅ Kliknięto View full specifications")
-            time.sleep(2)
+
         except:
             print("ℹ️ Brak przycisku View full specifications")
 
@@ -152,5 +152,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
